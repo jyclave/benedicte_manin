@@ -167,7 +167,7 @@ input[type="submit"]{
 }
 .les-promotions,
 .hidden {
-    display:flex;
+    display:none;
     flex-direction: column;
     margin-top: 50px;
     color: var(--main-color);
