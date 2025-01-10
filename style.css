@@ -1,0 +1,175 @@
+* {
+    font-family: "Syne";
+    margin: 0;
+}
+:root {
+    --main-color: #B1663C;
+    --text-color: #292F37;
+}
+a {
+    text-decoration: none;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+header, section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1440px;
+    padding: 0 50px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+.benedicte-manin {
+    color:var(--main-color);
+    margin-top: 25px;
+}
+.liens-header { 
+    display: block;
+
+}
+.nav-items {
+    color: var(--main-color);
+    text-align: center;
+    text-decoration: none;
+    margin-left: 30px;
+    margin-top: 5px;
+    cursor: pointer;
+    font-size: 20px;
+ 
+}
+#introduction {
+    display: flex;
+    align-items: center;
+    margin-top: 100px;
+    width: 100%;
+    height: 100%;
+    max-height: 800px;
+}
+#introduction figure {
+    flex: 1
+}
+#introduction img {
+    display: block;
+    margin: auto;
+    width: 60%;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0,1);
+}
+#introduction article {
+    flex: 1
+}
+#introduction h3 {
+    margin-bottom: 1em;
+}
+#introduction p {
+    margin-bottom: 20px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+.les-soins {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+.les-soins section {
+    box-sizing: border-box;
+}
+.les-soins-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.les-soins-section h2 {
+    color: var(--main-color);
+    margin: 50px 0px;
+ 
+}
+.soins-card-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+.card-soin {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    height: 500px;
+}
+.card-soin p {
+    padding: 10px;
+}
+.card-soin img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0,1);
+}
+.card-soin-content {
+    display: block;
+    justify-content:flex-start;
+    width: 100%;
+    height: 100%;   
+}
+.card-soin-content p {
+   color: var(--text-color);
+}
+
+#contact {
+    display: flex;
+    flex-direction: column;
+}
+  
+#contact h2{
+    margin-bottom: 20px;
+  }
+#form-contact {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    width: 100%;
+}
+  
+#contact input {
+    height: 50px;
+    font-size: 1.2em;
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  }
+#contact label {
+    margin: 2em 0 1em 0;
+  }
+#contact textarea {
+    border: none;
+    box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  }
+  
+input[type="submit"]{
+    font-family: 'Syne';
+    font-weight: 700;
+    color: #B1663C;
+    margin : 2em auto ;
+    width: 180px;
+    text-align: center;
+    border-radius: 60px ;
+    cursor: pointer;
+  }
+#message {
+    font-size: 22px;
+}
+.les-promotions,
+.hidden {
+    display:flex;
+    flex-direction: column;
+    margin-top: 50px;
+    color: var(--main-color);
+}
+
