@@ -2,19 +2,32 @@
     font-family: "Syne";
     margin: 0;
 }
+
 :root {
     --main-color: #B1663C;
     --text-color: #292F37;
 }
-a {
+a li {
     text-decoration: none;
-}
-body {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 
 }
+body {
+    background-color: white; /* Couleur par défaut au-delà de 1440px */
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 1440px;
+    height: 100vh;
+    background-color: #dfd8d8; /* ou la couleur/gradient de votre choix */
+    z-index: -1; /* Pour que le contenu passe au-dessus */
+}
+
 header, section {
     display: flex;
     flex-direction: row;
@@ -26,9 +39,13 @@ header, section {
     margin: 0 auto;
     box-sizing: border-box;
 }
+
 .benedicte-manin {
     color:var(--main-color);
     margin-top: 25px;
+}
+.benedicte-manin p {
+    font-size: 24px;
 }
 .liens-header { 
     display: block;
@@ -42,8 +59,43 @@ header, section {
     margin-top: 5px;
     cursor: pointer;
     font-size: 20px;
+}
+li {
+    list-style: none;
+}
+
+#carousel-container {
+    position: relative;
+    max-width: 1024px;
+    width: 100%;
+    height: 720px;
+    overflow: hidden;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 40px;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: 200ms opacity ease-in-out;
+    transition-delay: 200ms;
+    border-radius: 40px;
+  
+}
+
+.slide[data-active] {
+    opacity: 1;
+    z-index: 1;
+    transition-delay: 0ms;
  
 }
+
+
 #introduction {
     display: flex;
     align-items: center;
