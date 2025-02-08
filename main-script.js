@@ -33,69 +33,81 @@ function initCarousel() {
 document.addEventListener('DOMContentLoaded', initCarousel);
 
 document.addEventListener('DOMContentLoaded', function () {
-  const form = document.getElementById('form-contact');
-  form.addEventListener('submit', function (e) {
-      e.preventDefault(); // Empêche l'envoi par défaut
-      
-      // Récupération des champs
-      const nameInput = document.getElementById('name');
-      const emailInput = document.getElementById('email');
-      const messageInput = document.getElementById('message');
-      const msg = document.querySelector('.msg');
-      
-      const name = nameInput.value.trim();
-      const email = emailInput.value.trim();
-      const message = messageInput.value.trim();
-      
-      // Réinitialisation du message d'erreur
-      msg.innerHTML = '';
-      let hasError = false;
-      
-      // Validation du nom (lettres, espaces, accents, tirets et apostrophes)
-      if (!/^[a-zA-ZÀ-ÿ\s'-]+$/.test(name)) {
-          msg?.classList.add('error');
-          msg.innerHTML += '<p class="error">Le champ "Nom" doit contenir uniquement des lettres, des espaces, des accents, des tirets ou des apostrophes</p>';
-          hasError = true;
-          setTimeout(() => msg?.remove(), 3000);
-      }
-      
-      // Validation de l'email (format correct)
-      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-          msg?.classList.add('error');
-          msg.innerHTML += '<p class="error">Le champ "Email" doit contenir une adresse email valide.</p>';
-          hasError = true;
-          setTimeout(() => msg?.remove(), 3000);
-      }
-      
-      // Validation du message (non vide)
-      if (message === '') {
-          msg?.classList.add('error');
-          msg.innerHTML += '<p class="error">Le champ "Message" ne peut pas être vide.</p>';
-          hasError = true;
-          setTimeout(() => msg?.remove(), 3000);
-          
-      }
-      
-      // Si pas d'erreur, préparation de l'envoi
-      if (!hasError) {
-          // Création de l'URL mailto
-          const mailtoLink = `mailto:contact.mywebdev@gmail.com?subject=Message%20de%20${encodeURIComponent(name)}&body=${encodeURIComponent(
-              `De: ${name} (${email})\n\n${message}`
-          )}`;
-          
-          // Redirection vers mailto
-          window.location.href = mailtoLink;
-          
-          // Réinitialisation du formulaire
-          form.reset();
-          
-          // Message de succès
-          
-          msg.innerHTML = '<p class="success">Votre message a été envoyé avec succès!</p>';
-          msg.classList.add('succes');
-          setTimeout(() => msg?.remove(), 10000);
-      }
-  });
+    const form = document.getElementById('form-contact');
+    
+    function handleSubmit(e) {
+        e.preventDefault(); // Empêche l'envoi par défaut
+        
+        // Récupération des champs
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const messageInput = document.getElementById('message');
+        const msg = document.querySelector('.msg');
+        
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const message = messageInput.value.trim();
+        
+        // Réinitialisation du message d'erreur
+        msg.innerHTML = '';
+        let hasError = false;
+        
+        // Validation du nom (lettres, espaces, accents, tirets et apostrophes)
+        if (!/^[a-zA-ZÀ-ÿ\s'-]+$/.test(name)) {
+            msg?.classList.add('error');
+            msg.innerHTML += '<p class="error">Le champ "Nom" doit contenir uniquement des lettres, des espaces, des accents, des tirets ou des apostrophes</p>';
+            hasError = true;
+            setTimeout(() => {
+                msg.innerHTML = '';
+            }, 5000);
+        }
+        
+        // Validation de l'email (format correct)
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            msg?.classList.add('error');
+            msg.innerHTML += '<p class="error">Le champ "Email" doit contenir une adresse email valide.</p>';
+            hasError = true;
+            setTimeout(() => {
+                msg.innerHTML = '';
+            }, 5000);
+        }
+        
+        // Validation du message (non vide)
+        if (message === '' || message.length < 100) {
+            msg?.classList.add('error');
+            msg.innerHTML += `<p class="error">Le champ "Message" doit contenir au minimum 100 caractères. Actuellement : ${message.length} caractères.</p>`;
+            hasError = true;
+            setTimeout(() => {
+                msg.innerHTML = '';
+            }, 5000);
+        }
+        
+        // Si pas d'erreur, préparation de l'envoi
+        if (!hasError) {
+            // Création de l'URL mailto
+            const mailtoLink = `mailto:contact.mywebdev@gmail.com?subject=Message%20de%20${encodeURIComponent(name)}&body=${encodeURIComponent(
+                `De: ${name} (${email})\n\n${message}`
+            )}`;
+            
+            // Ouvrir le client mail dans une nouvelle fenêtre
+            window.open(mailtoLink, '_blank');
+            
+            // Réinitialisation du formulaire
+            form.reset();
+            
+            // Message de succès
+            msg?.classList.add('succes');
+            msg.innerHTML = '<p class="success">Votre message a été envoyé avec succès!</p>';
+            
+            // Effacer le message de succès après 5 secondes
+            setTimeout(() => {
+                msg.innerHTML = '';
+            }, 5000);
+        }
+    }
+    
+    // Ajout de l'écouteur d'événement
+    form.addEventListener('submit', handleSubmit);
 });
 
 
