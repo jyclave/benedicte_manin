@@ -44,6 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
       const nameInput = document.getElementById('name');
       const emailInput = document.getElementById('email');
       const messageInput = document.getElementById('message');
+      const msg = document.querySelector('.msg');
   
       const name = nameInput.value.trim();
       const email = emailInput.value.trim();
@@ -53,9 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
   
       // Validation du nom (lettres, espaces, accents, tirets et apostrophes)
       if (!/^[a-zA-ZÀ-ÿ\s'-]+$/.test(name)) {
-        errors.push(
-          'Le champ "Nom" doit contenir uniquement des lettres, des espaces, des accents, des tirets ou des apostrophes.'
-        );
+        errors.push('Le champ "Nom" doit contenir uniquement des lettres, des espaces, des accents, des tirets ou des apostrophes');           
       }
   
       // Validation de l'email (format correct)

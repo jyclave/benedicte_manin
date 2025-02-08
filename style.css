@@ -24,7 +24,6 @@ body::before {
     width: 100%;
     max-width: 1440px;
     height: 100vh;
-    background-color: #dfd8d8; /* ou la couleur/gradient de votre choix */
     z-index: -1; /* Pour que le contenu passe au-dessus */
 }
 
@@ -109,6 +108,7 @@ li {
     width: 100%;
     height: 100%;
     max-height: 800px;
+
 }
 #introduction figure {
     flex: 1
@@ -120,21 +120,32 @@ li {
     border-radius: 20px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0,1);
 }
+.introduction-container {
+    padding: 20px;
+    background-color:#B1663C;
+    border-radius: 10px;
+}
+
 #introduction article {
-    flex: 1
+    flex: 1   
 }
 #introduction h3 {
     margin-bottom: 1em;
+    color: #f0f0f0;
 }
 #introduction p {
     margin-bottom: 20px;
     margin-right: 20px;
     font-size: 16px;
+    color: #f0f0f0;
+    
 }
 .les-soins {
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
+    background-color: antiquewhite;
+    border-radius: 10px;
 }
 .les-soins section {
     box-sizing: border-box;
@@ -181,9 +192,76 @@ li {
    color: var(--text-color);
 }
 
+.massage-container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column; /* Force l'empilement vertical des éléments */
+    align-items: center; /* Centre les éléments horizontalement */
+  }
+  
+  .title {
+    text-align: center;
+    margin-bottom: 40px;
+    width: 100%; /* Assure que le titre prend toute la largeur */
+  }
+  
+  .massages-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%; /* Assure que la section prend toute la largeur */
+  }
+  
+  /* Le reste du CSS reste identique */
+  .service {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .service__description {
+    margin-bottom: 20px;
+  }
+  
+  .service__description h3 {
+    margin-bottom: 15px;
+  }
+  
+  .service__price {
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .service__price h4 {
+    margin-bottom: 5px;
+  }
+  
+  .service__price span {
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  @media (max-width: 768px) {
+    .massages-section {
+      flex-direction: column;
+    }
+    
+    .service {
+      margin-bottom: 20px;
+    }
+  }
+
 #contact {
     display: flex;
     flex-direction: column;
+    margin-top: 20px;
 }
   
 #contact h2{
@@ -220,15 +298,20 @@ input[type="submit"]{
     border-radius: 60px ;
     cursor: pointer;
   }
+input[type="submit"]:hover {
+    color:#a34108
+}
 #message {
     font-size: 22px;
 }
-.les-promotions,
-.hidden {
-    display:none;
-    flex-direction: column;
-    margin-top: 50px;
-    color: var(--main-color);
+
+.footer-container {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
 }
 
 .modal {
@@ -411,7 +494,7 @@ input[type="submit"]{
     }
 
     #introduction article {
-        padding: 0 20px;
+        padding: 20px;
     }
 
     #introduction p {

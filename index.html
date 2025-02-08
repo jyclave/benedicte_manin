@@ -7,6 +7,13 @@
     <title>Bénédicte Manin, naturopathe, spécialiste en fleurs de bach dans la région de Vienne 38200</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  >
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script> 
@@ -15,13 +22,14 @@
     <header>
         <div class="benedicte-manin">   
             <h1>Bénédicte Manin</h1>
-            <p>naturopathe</p>
+            <p>Naturopathe - Reflexologue plantaire</p>
+            <p>Praticienne massage bien être</p>
         </div>
         <nav class="liens-header">
             <a href="#les-soins-link" class="nav-items">Les soins</a>
-            <a href="#contact" class="nav-items">La fiche contact</a>
-            <a href="#" class="nav-items">Promotion</a>
-            <a href="#" class="nav-items">Bon cadeau</a>
+            <a href="#contact" class="nav-items">Les massages</a>
+            <a href="#" class="nav-items">Fleurs de Bach</a>
+            <a href="#" class="nav-items">Contact</a>
         </nav>
     </header>
 
@@ -36,20 +44,15 @@
             <figure>
              <img src="photos/PANA8958-Portrait02-01-Flou.jpeg" alt="bénédicte">   
             </figure>
-            <article>
-                <h3>Ici du texte</h3>
+            <article class="introduction-container">
+                <h3>Introduction</h3>
                 <p>
-                 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat odit voluptas quidem nam omnis neque reprehenderit! Inventore provident ex nulla nobis adipisci consequatur! Delectus, facilis tempora? Recusandae hic doloremque quod.   
+                    Apres une vie professionnelle riche et diversifiée, j'ai eu le besoin d'apprendre et d'exercer un métier plus aligné avec mes désirs et plus respectueux de mes valeurs et mes racines. J'ai ainsi redonner du sens à ma vie et retrouver une harmonie de vie.
                 </p>
                 <p>
-                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic cupiditate eveniet harum illum. Sunt fugit doloremque natus quaerat molestiae commodi voluptatum autem, numquam vel et cum earum hic ducimus placeat?   
+                    Après une formation de naturopathe qui s'est écoulée sur 3 ans, école Aesculape Lyon, je l'ai enrichie par une formation professionnalisante de reflexologue plantaire. Les émotions et le bien être du corps étant essentielles dans notre équilibre, je vous accompagne également en tant que conseillère Fleurs de Bach et patricienne massage bien-être.
                 </p>
-                <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam reprehenderit itaque aut! Fugiat, molestias. Nulla nihil officia nemo possimus quod veniam quos provident consectetur? Reprehenderit cupiditate exercitationem animi dolorem.  
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam reprehenderit itaque aut! Fugiat, molestias. Nulla nihil officia nemo possimus quod veniam quos provident consectetur? Reprehenderit cupiditate exercitationem animi dolorem.  
-                </p>
+
             </article>
         </section>
 
@@ -161,9 +164,47 @@
             </div>
         </section> 
 
+        <section class="massage-container">
+            <h2 class="title">Les Massages</h2>
+            <div class="massages-section">
+              <div class="service">
+                <div class="service__description">
+                  <h3>Le californien</h3>
+                  <p>Pour capturer vos moments les plus précieux et garder un souvenir impérissable. Je me déplace en Nouvelle Aquitaine pour réaliser vos photos</p>
+                </div>
+                <div class="service__price">
+                  <h4>350€/demi journée</h4>
+                  <span>Matériel, déplacement inclus</span>
+                </div>
+              </div>
+              <div class="service">
+                <div class="service__description">
+                  <h3>Retouches</h3>
+                  <p>Vous souhaitez retoucher vos photos pour un résultat professionnel ? Bénéficier d’un rendu optimal pour vos publications</p>
+                </div>
+                <div class="service__price">
+                  <h4>50€/photo</h4>
+                  <span>2 AR par photo</span>
+                </div>
+              </div>
+              <div class="service">
+                <div class="service__description">
+                  <h3>Album photos</h3>
+                  <p>Partagez avec vos proches et vos clients les photos des moments partagés ensemble à travers un album photo personnalisé</p>
+                </div>
+                <div class="service__price">
+                  <h4>400€ album A4</h4>
+                  <span>30 pages recto/verso</span>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
         <section id="contact">
             <h2>Contact</h2>
             <p>Vous avez une question ? Discutons-en !</p>
+            <div class="msg"></div>
             <form id="form-contact" action="#">
                 <label for="name">Nom</label>
                 <input type="text" name="name" id="name" />
@@ -176,6 +217,20 @@
         </section>
  
     </main>
+    <footer class="footer-container">
+        <div>
+           <p>Une prise en charge globale et</p>
+           <p>personnalisée pour un retour à l’équilibre.</p>
+           <i class="fa-brands fa-facebook"></i>
+           <i class="fa-brands fa-instagram"></i>
+        </div>
+        <div>
+            <h3>Contact</h3>
+            <i class="fa-solid fa-square-phone"></i><span>+33 4 28 29 43 44</span><br>
+            <i class="fa-solid fa-location-dot"></i><span>50 Passage des Cèdres,  38121  Chonas-l'Amballan</span><br>
+            <i class="fa-solid fa-envelope"></i><span>contact@testmoncompte.fr</span>
+        </div>
+    </footer>
     <div class="modal" id="soinModal">
         <div class="modal-content">
             <span class="close-modal">&times;</span>
