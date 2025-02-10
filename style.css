@@ -205,6 +205,7 @@ li {
     text-align: center;
     margin-bottom: 40px;
     width: 100%; /* Assure que le titre prend toute la largeur */
+    color: #a34108;
   }
   
   .massages-section {
@@ -259,16 +260,74 @@ li {
     margin-top: 10px;
 
 }
+.container-fleurs {
+    max-width: 800px;
+    margin: 40px auto;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
 
-  @media (max-width: 768px) {
-    .massages-section {
-      flex-direction: column;
-    }
-    
-    .service {
-      margin-bottom: 20px;
-    }
-  }
+.container-fleurs h2 {
+    text-align: center;
+    color:#a34108;
+    margin-bottom: 30px;
+}
+
+.accordion {
+    margin-bottom: 10px;
+}
+
+.accordion-header {
+    background-color: #f8f9fa;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #e9ecef;
+}
+
+.accordion-header::after {
+    content: '+';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #6c757d;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-top: none;
+    border-radius: 0 0 4px 4px;
+}
+
+.accordion-content-inner {
+    padding: 15px;
+}
+
+.active .accordion-header {
+    background-color: #e9ecef;
+    border-radius: 4px 4px 0 0;
+}
+
+.active .accordion-header::after {
+    content: '-';
+}
+
+.active .accordion-content {
+    max-height: 500px;
+}
+
 
 #contact {
     display: flex;
@@ -278,6 +337,7 @@ li {
   
 #contact h2{
     margin-bottom: 20px;
+    color: #a34108;
   }
 #form-contact {
     display: flex;
@@ -330,6 +390,13 @@ input[type="submit"]:hover {
 .footer-container p {
     font-size: 21px;
 }
+.phone-link {
+    text-decoration: none;
+    color: #a34108;
+}
+.phone-link:hover {
+    
+}
 .fa-brands, .fa-solid {
     font-size: 24px; /* Taille de base des icônes */
     margin: 0 8px;
@@ -347,7 +414,7 @@ input[type="submit"]:hover {
 .span-contact {
     margin-left: 15px;
     font-size: 21px;
-   align-items: middle;
+    align-items: middle;
 }
 .fa-brands:hover {
     color: #4267B2; /* Couleur Facebook au survol */
@@ -492,6 +559,19 @@ input[type="submit"]:hover {
     #form-contact {
         max-width: 450px;
     }
+    .container-fleurs {
+        max-width: 90%;
+        margin: 30px auto;
+    }
+
+    .container-fleurs h2 {
+        font-size: 24px;
+    }
+
+    .accordion-header {
+        padding: 12px;
+        font-size: 16px;
+    }
 }
 
 /* Tablet - 768px */
@@ -545,9 +625,18 @@ input[type="submit"]:hover {
         text-align: left;
     }
 
+    .les-soins {
+        justify-content: center;
+        align-items: center;
+    }
+    .les-soins-section h2 {
+        margin-top: 10px;
+    }
     .soins-card-grid {
         grid-template-columns: 1fr;
         gap: 30px;
+        justify-content: center;
+        align-items: center;
     }
 
     .card-soin {
@@ -595,6 +684,26 @@ input[type="submit"]:hover {
         font-size: 24px;
         margin: 0 12px;
       }
+      .container-fleurs {
+        max-width: 95%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+      .container-fleurs h2 {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .accordion-header {
+        padding: 10px;
+        font-size: 15px;
+    }
+
+    .accordion-content-inner {
+        padding: 12px;
+        font-size: 14px;
+    }
       
       /* Amélioration de l'affichage des informations de contact sur mobile */
       .contact-footer span.span-contact {
@@ -607,8 +716,8 @@ input[type="submit"]:hover {
         width: auto;
         margin-right: 5px;
       }
+      
     }
-
 
 /* Mobile - 425px */
 @media screen and (max-width: 425px) {
@@ -707,8 +816,36 @@ input[type="submit"]:hover {
         height: 40px;
         margin: 1.5em auto;
     }
+    .massages-section {
+        flex-direction: column;
+    }
+    .container-fleurs {
+        margin: 10px auto;
+        padding: 10px;
+    }
 
+    .container-fleurs h2 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .accordion-header {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .accordion-header::after {
+        font-size: 18px;
+        right: 10px;
+    }
+
+    .accordion-content-inner {
+        padding: 10px;
+        font-size: 13px;
+    }
 }
+
+
 
 /* Orientation paysage pour mobile */
 @media screen and (max-width: 768px) and (orientation: landscape) {

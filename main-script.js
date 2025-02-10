@@ -211,3 +211,20 @@ document.addEventListener('keydown', (event) => {
         }
     }
 });
+
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const accordionItem = header.parentElement;
+        const isActive = accordionItem.classList.contains('active');
+        
+        // Ferme tous les accordéons
+        document.querySelectorAll('.accordion').forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Ouvre l'accordéon cliqué si il n'était pas déjà ouvert
+        if (!isActive) {
+            accordionItem.classList.add('active');
+        }
+    });
+});
