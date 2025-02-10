@@ -571,7 +571,44 @@ input[type="submit"]:hover {
     input[type="submit"] {
         width: 150px;
     }
-}
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1rem;
+        gap: 2rem;
+      }
+      
+      .contact-footer {
+        width: 100%;
+      }
+      
+      .contact-footer h2 {
+        margin-bottom: 1rem;
+      }
+      
+      .fa-brands, .fa-solid {
+        font-size: 20px;
+      }
+      
+      .fa-facebook, .fa-instagram {
+        font-size: 24px;
+        margin: 0 12px;
+      }
+      
+      /* Amélioration de l'affichage des informations de contact sur mobile */
+      .contact-footer span.span-contact {
+        display: block;
+        margin: 8px 0 16px 0;
+        font-size: 0.85rem;
+      }
+      
+      .contact-footer .fa-solid {
+        width: auto;
+        margin-right: 5px;
+      }
+    }
+
 
 /* Mobile - 425px */
 @media screen and (max-width: 425px) {
