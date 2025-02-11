@@ -52,7 +52,6 @@ header, section {
 }
 .nav-items {
     color: var(--main-color);
-    text-align: center;
     text-decoration: none;
     margin-left: 30px;
     margin-top: 5px;
@@ -363,15 +362,17 @@ li {
 input[type="submit"]{
     font-family: 'Syne';
     font-weight: 700;
-    color: #B1663C;
+    color: white;
     margin : 2em auto ;
     width: 180px;
     text-align: center;
     border-radius: 60px ;
     cursor: pointer;
+    background-color:#a34108;
   }
 input[type="submit"]:hover {
-    color:#a34108
+    color: white;
+    background-color: teal;
 }
 #message {
     font-size: 22px;
@@ -706,13 +707,13 @@ input[type="submit"]:hover {
     }
       
       /* Amélioration de l'affichage des informations de contact sur mobile */
-      .contact-footer span.span-contact {
+    .contact-footer span.span-contact {
         display: block;
         margin: 8px 0 16px 0;
         font-size: 0.85rem;
       }
       
-      .contact-footer .fa-solid {
+    .contact-footer .fa-solid {
         width: auto;
         margin-right: 5px;
       }
@@ -795,6 +796,9 @@ input[type="submit"]:hover {
     #contact h2 {
         font-size: 20px;
         margin-bottom: 15px;
+    }
+    #contact p {
+        font-size: 14px;
     }
 
     #contact label {
