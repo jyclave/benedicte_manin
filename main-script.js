@@ -228,3 +228,22 @@ document.querySelectorAll('.accordion-header').forEach(header => {
         }
     });
 });
+// Sélection du bouton
+const scrollToTopButton = document.getElementById("scrollToTop");
+
+// Affiche la flèche après 300px de scroll
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 550) {
+    scrollToTopButton.style.display = "block";
+  } else {
+    scrollToTopButton.style.display = "none";
+  }
+});
+
+// Scroll automatique vers le haut
+scrollToTopButton.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
