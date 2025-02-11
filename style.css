@@ -151,6 +151,10 @@ li {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+
+}
+.soins-card-grid a{
+    text-decoration: none;
 }
 .card-soin {
     display: flex;
@@ -172,10 +176,12 @@ li {
     display: block;
     justify-content:flex-start;
     width: 100%;
-    height: 100%;   
+    height: 100%; 
+  
 }
 .card-soin-content p {
    color: var(--text-color);
+
 }
 
 .massage-container {
