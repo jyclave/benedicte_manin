@@ -407,6 +407,7 @@ input[type="submit"]:hover {
     font-size: 28px; /* Icônes sociales légèrement plus grandes */
     transition: color 0.3s ease;
     padding-top: 10px;
+    cursor: pointer;
 }
 .contact-footer h2 {
     color:#a34108;
@@ -693,6 +694,7 @@ input[type="submit"]:hover {
     }
     #carousel-container {
         height: 300px;
+        max-width: 400px;
         margin-top: 20px;
         border-radius: 15px;
     }
@@ -775,6 +777,15 @@ input[type="submit"]:hover {
         font-size: 13px;
     }
 }
+@media screen and (max-width: 370px) {
+    #carousel-container {
+        height: 300px;
+        max-width: 300px;
+        margin-top: 20px;
+        border-radius: 15px;
+    }
+}
+
 
 /* Orientation paysage pour mobile */
 @media screen and (max-width: 768px) and (orientation: landscape) {
