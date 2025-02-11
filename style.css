@@ -397,7 +397,7 @@ input[type="submit"]:hover {
     color: #a34108;
 }
 .phone-link:hover {
-    
+    color:teal;
 }
 .fa-brands, .fa-solid {
     font-size: 24px; /* Taille de base des icônes */
