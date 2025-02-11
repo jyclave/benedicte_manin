@@ -408,7 +408,6 @@ input[type="submit"]:hover {
     transition: color 0.3s ease;
     padding-top: 10px;
 }
-
 .contact-footer h2 {
     color:#a34108;
     padding-bottom: 10px;
@@ -434,7 +433,6 @@ input[type="submit"]:hover {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1000;
 }
-
 .modal-content {
     position: relative;
     background-color: #fff;
@@ -446,7 +444,6 @@ input[type="submit"]:hover {
     max-height: 90vh;
     overflow-y: auto;
 }
-
 .close-modal {
     position: absolute;
     top: 10px;
@@ -456,11 +453,9 @@ input[type="submit"]:hover {
     cursor: pointer;
     color: #666;
 }
-
 .close-modal:hover {
     color: #000;
 }
-
 .modal-nav {
     position: absolute;
     top: 50%;
@@ -478,86 +473,67 @@ input[type="submit"]:hover {
     justify-content: center;
     transition: all 0.3s ease;
 }
-
 .modal-nav:hover {
     background: #f0f0f0;
     box-shadow: 0 3px 8px rgba(0,0,0,0.3);
 }
-
 .prev-btn {
     left: 10px;
 }
-
 .next-btn {
     right: 10px;
 }
-
 .modal-body {
     display: flex;
     gap: 20px;
     margin-top: 20px;
 }
-
 .modal-image {
     flex: 1;
     max-width: 50%;
 }
-
 .modal-image img {
     width: 100%;
     height: auto;
     border-radius: 4px;
 }
-
 .modal-text {
     flex: 1;
 }
-
 .modal-price {
     font-size: 1.2em;
     font-weight: bold;
     margin-top: 20px;
     color: #2c3e50;
 }
-
-
-
 @media screen and (max-width: 1024px) {
     header, section {
         padding: 0 30px;
     }
-
     .benedicte-manin p {
         font-size: 20px;
     }
-
     .nav-items {
         font-size: 18px;
         margin-left: 20px;
     }
-
     #carousel-container {
         height: 600px;
         max-width: 900px;
     }
-
     #introduction {
         margin-top: 80px;
     }
-
     #introduction img {
         width: 70%;
     }
-
     .soins-card-grid {
         grid-template-columns: 1fr 1fr;
         gap: 20px;
     }
-
     .card-soin {
         height: 450px;
     }
-
     #form-contact {
         max-width: 450px;
     }
@@ -565,28 +541,22 @@ input[type="submit"]:hover {
         max-width: 90%;
         margin: 30px auto;
     }
-
     .container-fleurs h2 {
         font-size: 24px;
     }
-
     .accordion-header {
         padding: 12px;
         font-size: 16px;
     }
 }
-
-/* Tablet - 768px */
 @media screen and (max-width: 768px) {
     header {
         flex-direction: column;
         padding: 20px;
     }
-
     .liens-header {
         margin-top: 20px;
-    }
-    
+    }    
     .nav-items {
         margin: 0 10px;
         font-size: 16px;
@@ -599,34 +569,27 @@ input[type="submit"]:hover {
         margin-top: 30px;
         border-radius: 20px;
     }
-
     .slide {
         border-radius: 20px;
     }
-
     #introduction {
         flex-direction: column;
         margin-top: 50px;
         text-align: center;
     }
-
     #introduction figure {
         margin-bottom: 30px;
     }
-
     #introduction img {
         width: 80%;
     }
-
     #introduction article {
         padding: 20px;
     }
-
     #introduction p {
         margin-right: 0;
         text-align: left;
     }
-
     .les-soins {
         justify-content: center;
         align-items: center;
@@ -640,17 +603,14 @@ input[type="submit"]:hover {
         justify-content: center;
         align-items: center;
     }
-
     .card-soin {
         height: auto;
         max-width: 500px;
         margin: 0 auto;
     }
-
     .card-soin img {
         height: 200px;
     }
-
     #contact {
         padding: 0 20px;
     }
@@ -658,7 +618,6 @@ input[type="submit"]:hover {
     #form-contact {
         max-width: 100%;
     }
-
     input[type="submit"] {
         width: 150px;
     }
@@ -668,20 +627,16 @@ input[type="submit"]:hover {
         text-align: center;
         padding: 1rem;
         gap: 2rem;
-      }
-      
+      }     
       .contact-footer {
         width: 100%;
-      }
-      
+      }     
       .contact-footer h2 {
         margin-bottom: 1rem;
-      }
-      
+      }      
       .fa-brands, .fa-solid {
         font-size: 20px;
-      }
-      
+      }      
       .fa-facebook, .fa-instagram {
         font-size: 24px;
         margin: 0 12px;
@@ -690,51 +645,41 @@ input[type="submit"]:hover {
         max-width: 95%;
         margin: 20px auto;
         padding: 15px;
-    }
-
+      }
       .container-fleurs h2 {
         font-size: 22px;
         margin-bottom: 20px;
     }
-
     .accordion-header {
         padding: 10px;
         font-size: 15px;
     }
-
     .accordion-content-inner {
         padding: 12px;
         font-size: 14px;
     }
-      
-      /* Amélioration de l'affichage des informations de contact sur mobile */
+          /* Amélioration de l'affichage des informations de contact sur mobile */
     .contact-footer span.span-contact {
         display: block;
         margin: 8px 0 16px 0;
         font-size: 0.85rem;
-      }
-      
+      }     
     .contact-footer .fa-solid {
         width: auto;
         margin-right: 5px;
-      }
-      
+      }     
     }
-
 /* Mobile - 425px */
 @media screen and (max-width: 425px) {
     header, section {
         padding: 0 15px;
     }
-
     .benedicte-manin h1 {
         font-size: 24px;
     }
-
     .benedicte-manin p {
         font-size: 16px;
     }
-
     .liens-header {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -742,48 +687,38 @@ input[type="submit"]:hover {
         align-items: center;
         gap: 10px;
     }
-
     .nav-items {
         margin: 5px;
         font-size: 14px;
     }
-
     #carousel-container {
         height: 300px;
         margin-top: 20px;
         border-radius: 15px;
     }
-
     .slide {
         border-radius: 15px;
     }
-
     #introduction {
         margin-top: 30px;
     }
-
     #introduction img {
         width: 90%;
     }
-
     #introduction h3 {
         font-size: 18px;
     }
-
     #introduction p {
         font-size: 14px;
         margin-bottom: 15px;
     }
-
     .les-soins-section h2 {
         margin: 30px 0;
         font-size: 20px;
     }
-
     .card-soin {
         height: auto;
     }
-
     .card-soin img {
         height: 180px;
         border-radius: 15px;
@@ -793,7 +728,6 @@ input[type="submit"]:hover {
         padding: 8px;
         font-size: 14px;
     }
-
     #contact h2 {
         font-size: 20px;
         margin-bottom: 15px;
@@ -801,21 +735,17 @@ input[type="submit"]:hover {
     #contact p {
         font-size: 14px;
     }
-
     #contact label {
         margin: 1.5em 0 0.5em 0;
         font-size: 14px;
     }
-
     #contact input {
         height: 40px;
         font-size: 1em;
     }
-
     #message {
         font-size: 16px;
     }
-
     input[type="submit"] {
         width: 130px;
         height: 40px;
@@ -828,29 +758,23 @@ input[type="submit"]:hover {
         margin: 10px auto;
         padding: 10px;
     }
-
     .container-fleurs h2 {
         font-size: 20px;
         margin-bottom: 15px;
     }
-
     .accordion-header {
         padding: 8px;
         font-size: 14px;
     }
-
     .accordion-header::after {
         font-size: 18px;
         right: 10px;
     }
-
     .accordion-content-inner {
         padding: 10px;
         font-size: 13px;
     }
 }
-
-
 
 /* Orientation paysage pour mobile */
 @media screen and (max-width: 768px) and (orientation: landscape) {
@@ -860,24 +784,17 @@ input[type="submit"]:hover {
         align-items: flex-start;
         padding: 20px;
     }
-
     #introduction figure {
         margin-bottom: 0;
         margin-right: 20px;
     }
-
     #introduction img {
         width: 100%;
     }
-
     .soins-card-grid {
         grid-template-columns: 1fr 1fr;
     }
-
     #carousel-container {
         height: 300px;
     }
 }
-
-
-
